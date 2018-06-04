@@ -1,0 +1,4 @@
+IdentityFile /home/leon/leon-docker/id_rsa
+User ubuntu
+StrictHostKeyChecking no
+PasswordAuthentication no
