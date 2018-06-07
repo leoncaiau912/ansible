@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: False
+  become_user: root
+
+  tasks:
+
+    - name: Run a command that uses non-posix shell-isms (in this example /bin/sh doesn't handle redirection and wildcards together but bash does)
+      raw: ls -l /etc/ > /tmp/etc
+      args:
+      executable: /bin/bash
